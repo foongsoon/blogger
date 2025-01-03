@@ -1,0 +1,59 @@
+;;
+;; Domain:     sun.edu.my.
+;; Exported:   2024-12-19 01:13:04
+;;
+;; This file is intended for use for informational and archival
+;; purposes ONLY and MUST be edited before use on a production
+;; DNS server.  In particular, you must:
+;;   -- update the SOA record with the correct authoritative name server
+;;   -- update the SOA record with the contact e-mail address information
+;;   -- update the NS record(s) with the authoritative name servers for this domain.
+;;
+;; For further information, please consult the BIND documentation
+;; located on the following website:
+;;
+;; http://www.isc.org/
+;;
+;; And RFC 1035:
+;;
+;; http://www.ietf.org/rfc/rfc1035.txt
+;;
+;; Please note that we do NOT offer technical support for any use
+;; of this zone data, the BIND name server, or any other third-party
+;; DNS software.
+;;
+;; Use at your own risk.
+;; SOA Record
+sun.edu.my	3600	IN	SOA	brady.ns.cloudflare.com. dns.cloudflare.com. 2048623738 10000 2400 604800 3600
+
+;; NS Records
+sun.edu.my.	86400	IN	NS	brady.ns.cloudflare.com.
+sun.edu.my.	86400	IN	NS	chelsea.ns.cloudflare.com.
+
+;; A Records
+sun.edu.my.	1	IN	A	216.239.38.21 ; google Redirect URL without subdomain to your blog’s URL
+sun.edu.my.	1	IN	A	216.239.36.21 ; google Redirect URL without subdomain to your blog’s URL
+sun.edu.my.	1	IN	A	216.239.34.21 ; google Redirect URL without subdomain to your blog’s URL
+sun.edu.my.	1	IN	A	216.239.32.21 ; google Redirect URL without subdomain to your blog’s URL
+
+;; CNAME Records
+www.sun.edu.my.	1	IN	CNAME	ghs.googlehosted.com.
+
+;; MX Records
+sun.edu.my.	1	IN	MX	11 route1.mx.cloudflare.net.
+sun.edu.my.	1	IN	MX	17 route2.mx.cloudflare.net.
+sun.edu.my.	1	IN	MX	12 route3.mx.cloudflare.net.
+
+;; NS Records
+sun.edu.my.	86400	IN	NS	brady.ns.cloudflare.com.
+sun.edu.my.	86400	IN	NS	chelsea.ns.cloudflare.com.
+
+;; TXT Records
+_dmarc.sun.edu.my.	1	IN	TXT	"v=DMARC1; p=reject; sp=reject; adkim=s; aspf=s;"
+_dmarc.sun.edu.my.	1	IN	TXT	"v=DMARC1;  p=none; rua=mailto:3294f28ebec7452591259a5c41306caa@dmarc-reports.cloudflare.net"
+*._domainkey.sun.edu.my.	1	IN	TXT	"v=DKIM1; p="
+google-site-verification.sun.edu.my.	1	IN	TXT	"=nY9JAVkzmR40R-OqpkjfWMiCsP0lLFNPwKxRKjuLEiE"
+sun.edu.my.	1	IN	TXT	"MS=ms78454585" ; microsoft.comDomainDnsRecordsBlade
+sun.edu.my.	1	IN	TXT	"google-site-verification=nY9JAVkzmR40R-OqpkjfWMiCsP0lLFNPwKxRKjuLEiE"
+sun.edu.my.	1	IN	TXT	"v=spf1 include:_spf.mx.cloudflare.net ~all"
+www.sun.edu.my.	1	IN	TXT	"apple-domain-verification=tl_SC_S8nBQNTsFIY2FR8PnavKpEF_EhFVnymFmvjJY" ; apple.com Apple Business Connect email
