@@ -1,59 +1,66 @@
-;;
-;; Domain:     sun.edu.my.
-;; Exported:   2024-12-19 01:13:04
-;;
-;; This file is intended for use for informational and archival
-;; purposes ONLY and MUST be edited before use on a production
-;; DNS server.  In particular, you must:
-;;   -- update the SOA record with the correct authoritative name server
-;;   -- update the SOA record with the contact e-mail address information
-;;   -- update the NS record(s) with the authoritative name servers for this domain.
-;;
-;; For further information, please consult the BIND documentation
-;; located on the following website:
-;;
-;; http://www.isc.org/
-;;
-;; And RFC 1035:
-;;
-;; http://www.ietf.org/rfc/rfc1035.txt
-;;
-;; Please note that we do NOT offer technical support for any use
-;; of this zone data, the BIND name server, or any other third-party
-;; DNS software.
-;;
-;; Use at your own risk.
-;; SOA Record
-sun.edu.my	3600	IN	SOA	brady.ns.cloudflare.com. dns.cloudflare.com. 2048623738 10000 2400 604800 3600
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  background-color: #f1f1f1;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-;; NS Records
-sun.edu.my.	86400	IN	NS	brady.ns.cloudflare.com.
-sun.edu.my.	86400	IN	NS	chelsea.ns.cloudflare.com.
+#navbar {
+  background-color: #333;
+  position: fixed;
+  top: -50px;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+}
 
-;; A Records
-sun.edu.my.	1	IN	A	216.239.38.21 ; google Redirect URL without subdomain to your blog’s URL
-sun.edu.my.	1	IN	A	216.239.36.21 ; google Redirect URL without subdomain to your blog’s URL
-sun.edu.my.	1	IN	A	216.239.34.21 ; google Redirect URL without subdomain to your blog’s URL
-sun.edu.my.	1	IN	A	216.239.32.21 ; google Redirect URL without subdomain to your blog’s URL
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 17px;
+}
 
-;; CNAME Records
-www.sun.edu.my.	1	IN	CNAME	ghs.googlehosted.com.
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+</style>
+</head>
+<body>
 
-;; MX Records
-sun.edu.my.	1	IN	MX	11 route1.mx.cloudflare.net.
-sun.edu.my.	1	IN	MX	17 route2.mx.cloudflare.net.
-sun.edu.my.	1	IN	MX	12 route3.mx.cloudflare.net.
+<div id="navbar">
+  <a href="#home">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+</div>
 
-;; NS Records
-sun.edu.my.	86400	IN	NS	brady.ns.cloudflare.com.
-sun.edu.my.	86400	IN	NS	chelsea.ns.cloudflare.com.
+<div style="padding:15px 15px 2500px;font-size:30px">
+  <p><b>This example demonstrates how to slide down a navbar when the user starts to scroll the page.</b></p>
+  <p>Scroll down this frame to see the effect!</p>
+  <p>Scroll to the top to hide the navbar.</p>
+  <p>Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
 
-;; TXT Records
-_dmarc.sun.edu.my.	1	IN	TXT	"v=DMARC1; p=reject; sp=reject; adkim=s; aspf=s;"
-_dmarc.sun.edu.my.	1	IN	TXT	"v=DMARC1;  p=none; rua=mailto:3294f28ebec7452591259a5c41306caa@dmarc-reports.cloudflare.net"
-*._domainkey.sun.edu.my.	1	IN	TXT	"v=DKIM1; p="
-google-site-verification.sun.edu.my.	1	IN	TXT	"=nY9JAVkzmR40R-OqpkjfWMiCsP0lLFNPwKxRKjuLEiE"
-sun.edu.my.	1	IN	TXT	"MS=ms78454585" ; microsoft.comDomainDnsRecordsBlade
-sun.edu.my.	1	IN	TXT	"google-site-verification=nY9JAVkzmR40R-OqpkjfWMiCsP0lLFNPwKxRKjuLEiE"
-sun.edu.my.	1	IN	TXT	"v=spf1 include:_spf.mx.cloudflare.net ~all"
-www.sun.edu.my.	1	IN	TXT	"apple-domain-verification=tl_SC_S8nBQNTsFIY2FR8PnavKpEF_EhFVnymFmvjJY" ; apple.com Apple Business Connect email
+<script>
+// When the user scrolls down 20px from the top of the document, slide down the navbar
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+}
+</script>
+
+</body>
+</html>
